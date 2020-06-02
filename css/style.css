@@ -60,7 +60,7 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px;
     height: 20rem;
-    background: url(img/ban.png);
+    background: url(../img/ban.png);
     background-size: cover;
     background-position: center;
     border: solid;
