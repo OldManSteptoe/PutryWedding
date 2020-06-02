@@ -1,0 +1,593 @@
+/* CSS Variables */
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 2px 5px rgba(17, 17, 17);
+}
+
+
+/* Main CSS */
+
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #f5aede;
+    margin: 30px 30px;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+
+/* Showcase */
+
+.info {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: var(--light);
+    text-shadow: var(--shadow);
+    text-align: center;
+    grid-area: info;
+}
+
+.logo {
+    height: 100%;
+    grid-area: logo;
+    text-align: center;
+    
+}
+
+.showcase {
+    display: grid;
+    grid-template-areas: "logo info info"
+                        
+                            "logo hfaceico hfaceico";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    height: 20rem;
+    background: url(/img/ban.png);
+    background-size: cover;
+    background-position: center;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    
+}
+
+
+/* Navigation */
+
+.main-nav ul  {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a, .dropbtn  {
+    background: #ffe0ff;
+    background: linear-gradient(to left, #ffe0ff 50%, #c17eac 50%);
+    background-size: 200% 100%;
+    transition: all 0.5s ease;
+    background-position: right bottom;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.dropbtn:focus{
+    background: #c17eac;
+    transform: scale(1.05);
+}
+
+
+.dropdown {
+  position: relative;
+  
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    overflow: auto;
+    box-shadow: var(--shadow);
+    z-index: 1;
+  }
+
+  .show {
+      display: block;  
+    }
+
+
+.dropbtn {
+    outline: none;
+    width: 100%;
+    border: none;
+}
+
+.main-nav a:hover, .dropbtn:hover  {
+    
+    background-position: left bottom;
+    
+    color: var(--light);
+}
+
+.current a, .current button {
+    background: #c17eac;
+    transform: scale(1.05);
+}
+/* Boxes */
+
+.boxes {
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.box {
+    min-height: 15rem;
+    background-color: #ffe0ff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: var(--shadow);
+}
+
+.boxes a {
+    transition: all .2s ease-in-out;
+    display: block;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.boxes a :hover {
+    transform: scale(1.05);
+    background: #c17eac;
+    color: var(--light);
+}
+
+/* Slideshow */
+
+.slideshow {
+    display: grid;
+    grid-template-areas: "content bainfo bainfo";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.mySlides {
+    
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.content {
+    
+    grid-area: content;
+    
+    max-width: 100%; 
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bainfo {
+    max-width: 100%; 
+    height: auto;
+    padding: 20px;
+    grid-area: bainfo;
+    text-align: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-areas: " . . smlogo  . faceico" ;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+
+
+.smlogo {
+    height: 80px; 
+    
+    grid-area: smlogo;
+    float: center;
+    
+}
+
+.hfaceicon{
+    padding-top: 10px;
+    
+}
+
+.faceicon, .hfaceicon, .faceiconad {
+    
+    transition: all .2s ease-in-out;
+    margin: auto;
+    float: center;
+    grid-area: faceico;
+}
+
+.whatsicon :hover, .faceicon :hover, .hfaceicon  :hover, .faceiconad :hover{
+    transform: scale(1.1);
+    
+}
+
+.faceicon i, .hfaceicon i, .faceiconad i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    
+    
+    border-radius: 15px;
+    border-width: 1px;
+    
+    padding: 0.5rem;
+}
+
+.whatsicon{
+    transition: all .2s ease-in-out;
+   margin-left: auto;
+   margin-right: auto;
+    
+    
+}
+
+.whatsicon i{
+ 
+    background: white;
+        
+    color: green;
+    border-radius: 15px;
+    border-width: 1px;
+    
+    padding: 0.5rem;
+    
+}
+
+.scontent{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "scontentinfo scontentinfo servicelist"
+                            "scontentinfo scontentinfo scenelist";
+}
+.scontentinfo {
+    
+    grid-area: scontentinfo;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+
+.servicelist {
+    
+    grid-area: servicelist;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+.scenelist {
+    
+    grid-area: scenelist;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+.faceiconad{
+    grid-area: faceiconad;
+}
+.insty{
+    grid-area: insty;
+}
+
+.insty h2{
+font-size: 20px;
+}
+
+.instaad{
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "insty insty insty insty faceiconad";
+}
+
+.gallytitle, .instaad{
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+
+
+.gallyboxes {
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.gallybox {
+    min-height: 12rem;
+
+    background-color: #ffe0ff;
+    display: grid;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.gallybox img{
+    
+    min-width: auto;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.contact{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "cform cform wcindy wrisca"
+                            "cform cform social social";
+}
+
+.contactform {
+    
+    grid-area: cform;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+.callbtnrisca{
+    min-height: 80px;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+.callbtncindy{
+    min-height: 80px;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+
+.whatsappcindy {
+    grid-area: wcindy;
+    display: grid;
+    
+}
+
+.whatsappcindy p, .whatsapprisca p{
+    font-size: 0.9rem;
+}
+
+
+
+.whatsapprisca {
+    
+    grid-area: wrisca;
+    display: grid;
+}
+.callbtncindy p, .callbtnrisca p{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.social {
+    
+    grid-area: social;
+    padding: 20px;
+    background: #faebd7;
+    border: solid;
+    border-color: #333;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media (max-width:700px) {
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .showcase {
+        background: url(/img/banvert.png);
+        background-size: cover;
+        
+        height: 40rem;
+        display: grid;
+        grid-template-rows: 250px 1fr 1fr;
+        grid-template-areas: "logo" "info" "hfaceico";
+        grid-template-columns: 1fr;
+    }
+    .slideshow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "content" "content" "bainfo" "bainfo";
+    }
+    .faceicon {
+        padding-top: 0px;
+    }
+
+    .scontent{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "scontentinfo scontentinfo "
+                                "servicelist scenelist";
+    }
+
+
+    .contact{
+        display: grid;
+        grid-gap: 20px;
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "wcindy wrisca"
+                                "cform cform" 
+                                
+                                "social social";
+    }
+
+    
+  
+}
+
+@media (max-width:500px) {
+    .slideshow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-areas: "content" "bainfo" "bainfo";
+
+    }
+}
+
+
+
+@media (max-width:400px) {
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+    .slideshow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+        grid-template-areas: "content" "bainfo";
+    }
+    .faceicon {
+        padding-top: 3px;
+        padding-right: 3px;
+        
+    }
+    .phone h3 {
+        font-size: 12px;
+        padding-left: 10px;
+        color: #333;
+    }
+    .showcase h1 {
+        font-size: 22px;
+        padding-top: 0;
+    }
+    .showcase {
+        padding: 10px;
+        height: 45rem;
+        display: grid;
+        grid-template-rows: 250px 1fr 1fr;
+        grid-template-areas: "logo" "info" "hfaceico"
+                            ;
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        
+        grid-template-areas: " smlogo smlogo . . faceico" ;
+        grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    }
+    .smlogo {
+        height: 70px; 
+    }    
+
+    .scontent{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: "scontentinfo"
+                                "scenelist"
+                                "servicelist";
+    }
+
+
+    .instaad{
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "insty" "faceiconad";
+    }
+    .whatsappcindy p, .whatsapprisca p{
+        font-size: 0.7rem;
+    }
+    
+}
